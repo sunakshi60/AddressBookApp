@@ -14,7 +14,8 @@ class Program
         {
             Console.WriteLine();
             Console.WriteLine("1. Add Contact");
-            Console.WriteLine("2. Show All Contacts");
+            Console.WriteLine("2. Edit Contact");
+            Console.WriteLine("3. Show All Contacts");
             Console.WriteLine("0. Exit");
             Console.Write("Enter your choice: ");
 
@@ -70,9 +71,26 @@ class Program
             }
             else if (choice == "2")
             {
+                Console.WriteLine("Enter first name to edit: ");
+                string firstName = Console.ReadLine();
+
+                Console.WriteLine("Enter last name to edit: ");
+                string lastName = Console.ReadLine();
+
+                try
+                {
+                    addressBook.EditContact(firstName, lastName);
+                }
+                catch(InvalidContactException ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
+            else if (choice == "3")
+            {
                 addressBook.PrintAll();
             }
-            else if (choice == "0")
+            else if(choice == "0")
             {
                 break;
             }
