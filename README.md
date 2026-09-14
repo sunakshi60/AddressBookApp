@@ -57,6 +57,35 @@ The application is developed incrementally using multiple Use Cases (UC1–UC12)
 
 Each Use Case is developed in its own feature branch and merged into `main` after completion and testing.
 
+### Branch Structure
+
+```text
+main
+ │
+ ├── feature/UC1-create-contact
+ │
+ ├── feature/UC2-validate-contact
+ │
+ ├── feature/UC3-add-multiple-contacts
+ │
+ ├── feature/UC4-edit-contact
+ │
+ ├── feature/UC5-delete-contact
+ │
+ ├── feature/UC6
+ │
+ ├── feature/UC7
+ │
+ ├── feature/UC8
+ │
+ ├── feature/UC9
+ │
+ ├── feature/UC10
+ │
+ ├── feature/UC11
+ │
+ └── feature/UC12
+```
 
 ### Development Workflow
 
@@ -70,61 +99,4 @@ For each Use Case:
 6. Merge the feature branch into `main`
 7. Continue with the next Use Case
 
-=======
-A console-based Address Book application developed using C# and .NET.
 
-The project is built incrementally using multiple Use Cases (UC1–UC12). Each Use Case is implemented in its own Git feature branch and merged into the `main` branch after completion.
-
-## Project Objective
-
-The objective of this project is to build an Address Book application that allows users to:
-
-- Create contacts
-- Edit existing contacts
-- Delete contacts
-- Display all contacts
-- Prevent duplicate contacts
-- Search contacts by city or state
-- Group contacts by city or state
-- Count contacts by city or state
-- Sort contacts using different fields
-- Manage multiple address books
-
-## Technologies Used
-
-- C#
-- .NET
-- Visual Studio
-- Git
-- GitHub
-- LINQ
-- Regular Expressions
-
-## Project Structure
-
-```text
-AddressBook/
-│
-├── AddressBookApp/
-│   ├── Exceptions/
-│   │   └── InvalidContactException.cs
-│   │
-│   ├── Models/
-│   │   └── Contact.cs
-│   │
-│   ├── Services/
-│   │   ├── AddressBook.cs
-│   │   └── AddressBookMain.cs
-│   │
-│   ├── Validation/
-│   │   └── ContactValidator.cs
-│   │
-│   ├── Program.cs
-│   ├── AddressBookApp.csproj
-│   └── AddressBookApp.slnx
-│
-├── AddressBookTests/
-│   └── UnitTest1.cs
-│
-└── README.md
->>>>>>> feature/UC1-create-contact
