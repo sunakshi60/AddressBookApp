@@ -1,4 +1,6 @@
 ﻿using AddressBookApp.Models;
+using AddressBookApp.Validation;
+using AddressBookApp.Exceptions;
 
 class Program
 {
@@ -15,7 +17,15 @@ class Program
         "john.doe@mail.com"
         );
 
-        Console.WriteLine(contact);
+        try
+        {
+            ContactValidator.Validate(contact);
+            Console.WriteLine(contact);
+        }
+        catch (InvalidContactException ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
 
         Console.ReadLine();
     }
