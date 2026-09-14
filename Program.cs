@@ -66,9 +66,15 @@ class Program
                         email
                     );
 
-                    addressBook.AddContact(contact);
+                    if (addressBook.AddContact(contact))
+                    {
+                        Console.WriteLine("\nContact added successfully.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nContact already exists");
+                    }
 
-                    Console.WriteLine("\nContact added successfully.");
                 }
                 catch (InvalidContactException ex)
                 {
