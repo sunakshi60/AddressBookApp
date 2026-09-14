@@ -82,6 +82,23 @@ namespace AddressBookApp.Services
             Console.WriteLine("Contact updated.");
         }
 
+        public void DeleteContact(string firstName,string lastName)
+        {
+            Contact contact = contacts.FirstOrDefault(
+                c => c.FirstName == firstName && c.LastName == lastName
+            );
+
+            if (contact == null)
+            {
+                Console.WriteLine("Contact not founs.");
+                return;
+            }
+
+            contacts.Remove(contact);
+
+            Console.WriteLine("Contact deleted");
+        }
+
         public void PrintAll()
         {
             foreach (Contact contact in contacts)
