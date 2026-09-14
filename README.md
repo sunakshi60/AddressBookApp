@@ -1,6 +1,5 @@
 # Address Book App
 
-<<<<<<< HEAD
 A console-based Address Book application developed in C# and .NET.
 
 ## Project Objective
