@@ -8,7 +8,11 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Address Book App");
+
         AddressBook addressBook = new AddressBook();
+        AddressBookMain addressBookMain = new AddressBookMain();
+
+        addressBookMain.AddAddressBook(addressBook);
 
         while (true)
         {
@@ -17,6 +21,7 @@ class Program
             Console.WriteLine("2. Edit Contact");
             Console.WriteLine("3. Delete Contact");
             Console.WriteLine("4. Show All Contacts");
+            Console.WriteLine("5. Count Contacts");
             Console.WriteLine("0. Exit");
             Console.Write("Enter your choice: ");
 
@@ -63,7 +68,7 @@ class Program
 
                     addressBook.AddContact(contact);
 
-                    Console.WriteLine("Contact added successfully.");
+                    Console.WriteLine("\nContact added successfully.");
                 }
                 catch (InvalidContactException ex)
                 {
@@ -100,6 +105,10 @@ class Program
             else if (choice == "4")
             {
                 addressBook.PrintAll();
+            }
+            else if (choice == "5")
+            {
+                Console.WriteLine($"Total Contacts: {addressBookMain.CountContacts()}");
             }
             else if(choice == "0")
             {
