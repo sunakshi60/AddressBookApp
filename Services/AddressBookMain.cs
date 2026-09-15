@@ -86,5 +86,35 @@ namespace AddressBookApp.Services
                 }
             }
         }
+
+        public void CountByCity()
+        {
+            var cityCounts = addressBooks
+                .SelectMany(b => b.Contacts)
+                .GroupBy(c => c.City)
+                .Select(g => new { City = g.Key, Count = g.Count() });
+
+            Console.WriteLine("By City:");
+
+            foreach(var city in cityCounts)
+            {
+                Console.WriteLine($"{city.City} = {city.Count}");
+            }
+        }
+
+        public void CountByState()
+        {
+            var stateCounts = addressBooks
+                .SelectMany(b => b.Contacts)
+                .GroupBy(c => c.State)
+                .Select(g => new { State = g.Key, Count = g.Count() });
+
+            Console.WriteLine("By State:");
+
+            foreach (var state in stateCounts)
+            {
+                Console.WriteLine($"{state.State} = {state.Count}");
+            }
+        }
     }
 }

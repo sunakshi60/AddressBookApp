@@ -26,6 +26,8 @@ class Program
             Console.WriteLine("7. Search By State");
             Console.WriteLine("8. View Contacts By City");
             Console.WriteLine("9. View Contacts By State");
+            Console.WriteLine("10. Count Contacts By City");
+            Console.WriteLine("11. Count Contacts By State");
             Console.WriteLine("0. Exit");
             Console.Write("Enter your choice: ");
 
@@ -141,6 +143,14 @@ class Program
             else if (choice == "9")
             {
                 addressBookMain.ViewByState();
+            }
+            else if (choice == "10")
+            {
+                addressBookMain.CountByCity();
+            } 
+            else if (choice == "11")
+            {
+                addressBookMain.CountByState();
             }
             else if(choice == "0")
             {
