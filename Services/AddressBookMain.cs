@@ -131,5 +131,47 @@ namespace AddressBookApp.Services
                 Console.WriteLine(contact.ToString());
             }
         }
+
+        public void SortByCity()
+        {
+            var contacts = addressBooks
+                .SelectMany(b => b.Contacts)
+                .OrderBy(c => c.City);
+
+            Console.WriteLine("--- Sorted By City ---");
+            
+            foreach(Contact contact in contacts)
+            {
+                Console.WriteLine(contact);
+            }
+        }
+
+        public void SortByState()
+        {
+            var contacts = addressBooks
+                .SelectMany(b => b.Contacts)
+                .OrderBy(c => c.State);
+
+            Console.WriteLine("--- Sorted By State ---");
+
+            foreach (Contact contact in contacts)
+            {
+                Console.WriteLine(contact);
+            }
+        }
+
+        public void SortByZip()
+        {
+            var contacts = addressBooks
+                .SelectMany(b => b.Contacts)
+                .OrderBy(c => c.Zip);
+
+            Console.WriteLine("--- Sorted By Zip ---");
+
+            foreach (Contact contact in contacts)
+            {
+                Console.WriteLine(contact);
+            }
+        }
     }
 }
