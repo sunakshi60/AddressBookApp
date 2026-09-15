@@ -22,6 +22,8 @@ class Program
             Console.WriteLine("3. Delete Contact");
             Console.WriteLine("4. Show All Contacts");
             Console.WriteLine("5. Count Contacts");
+            Console.WriteLine("6. Search By City");
+            Console.WriteLine("7. Search By State");
             Console.WriteLine("0. Exit");
             Console.Write("Enter your choice: ");
 
@@ -115,6 +117,20 @@ class Program
             else if (choice == "5")
             {
                 Console.WriteLine($"Total Contacts: {addressBookMain.CountContacts()}");
+            }
+            else if (choice == "6")
+            {
+                Console.Write("Enter a city to search: ");
+                string city = Console.ReadLine();
+
+                addressBookMain.SearchByCity(city);
+            }
+            else if(choice == "7")
+            {
+                Console.Write("Enter a state to search: ");
+                string state = Console.ReadLine();
+
+                addressBookMain.SearchByState(state);
             }
             else if(choice == "0")
             {
