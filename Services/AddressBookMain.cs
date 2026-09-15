@@ -116,5 +116,20 @@ namespace AddressBookApp.Services
                 Console.WriteLine($"{state.State} = {state.Count}");
             }
         }
+
+        public void SortByName()
+        {
+            var contacts = addressBooks
+                .SelectMany(b => b.Contacts)
+                .OrderBy(c => c.FirstName)
+                .ThenBy(c => c.LastName);
+
+            Console.WriteLine("---Sorted By Name---");
+
+            foreach(Contact contact in contacts)
+            {
+                Console.WriteLine(contact.ToString());
+            }
+        }
     }
 }
