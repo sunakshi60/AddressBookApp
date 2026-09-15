@@ -53,6 +53,54 @@ The application is developed incrementally using multiple Use Cases (UC1–UC12)
 * Display a message when the contact is not found
 * Display a confirmation message after successful deletion
 
+### UC6 – Count Contacts
+
+* Introduce AddressBookMain
+* Manage multiple AddressBook objects
+* Count contacts across multiple address books using LINQ Sum
+* UC7 – Prevent Duplicate Contacts
+* Prevent duplicate contacts based on first name and last name
+* Check whether a contact already exists before adding
+* Display a duplicate contact message when a duplicate is found
+
+### UC8 – Search Contacts
+
+* Search contacts by city or state
+* Search across multiple address books
+* Display matching contacts
+
+### UC9 – Group Contacts
+
+* Group contacts by city
+* Use LINQ GroupBy() to organize contacts
+* Group contacts across multiple address books
+* Display contacts under their respective city
+
+### UC10 – Count Contacts by City and State
+
+* Implemented contact count by City.
+* Implemented contact count by State.
+* Used LINQ GroupBy() and Count().
+* Displayed city-wise and state-wise contact counts.
+* Added handling for empty contact lists.
+
+### UC11 – Sort Contacts by Name
+
+* Implemented sorting contacts by First Name.
+* Used Last Name as the secondary sorting criteria.
+* Used LINQ OrderBy() and ThenBy().
+* Added a menu option to sort contacts by name.
+* Added handling for empty contact lists.
+
+### UC12 – Sort Contacts by City, State and Zip
+
+* Implemented sorting contacts by City.
+* Implemented sorting contacts by State.
+* Implemented sorting contacts by Zip.
+* Used LINQ OrderBy() for sorting.
+* Added menu options for City, State and Zip sorting.
+*Added handling for empty contact lists.
+
 ## Git Workflow
 
 Each Use Case is developed in its own feature branch and merged into `main` after completion and testing.
